@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Malini resume</title>
+    
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    background-color: #292929;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: teal;
+    border-radius: 10px;
+    z-index: 10;
+    text-align: center;
+    padding: 3px 10px 3px 3px;
+}
+
+#header h1{
+
+    font-size: 23px;
+    font-weight: 800;
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+} 
+
+.con{
+    position: relative;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    height: 250px;
+    border-radius: 20px;
+    background-color: crimson;
+    box-shadow: 2px 2px 10px 6px black;
+    margin-top: 150px;
+    color: white;
+    font-weight: 800;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+
+}
+.fc{
+    box-shadow: 0 0 0 0 ;
+}
+.con:hover{
+    cursor: pointer;
+}
+.hd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 50px;
+    padding: 50px;
+    text-align: left;
+    background-color: rgb(155, 8, 38);
+}
+.con:hover{
+    
+    height: 450px;
+
+}
+.bc:hover{
+    height: 480px;
+}
+.fc:hover{
+    height: 100px;
+}
+.ci:hover{
+    height: 850px;
+}
+
+.data{
+    position: relative;
+    margin-top: 250px;
+    width: auto;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 9;
+    color: white;
+    font-weight: 500;
+    word-spacing: 5px;
+    font-size: 18px;
+}
+ul{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 40px;
+}
+
+
+table,tr,td{
+    border: 2px solid white;
+    border-collapse: collapse;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.sc{
+    z-index: 20;
+    position: fixed;
+    top: 5%;
+    visibility: hidden;
+
+}
+#close{
+    position: absolute;
+    top: 0%;
+    float: right;
+    right: 0%;
+    width: auto;
+    height:auto;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    background-color: red;
+    color: wheat;
+    font-weight: 900;
+}
+</style>
+
+</head>
+<body>
+
+<div class="" id="header">
+    <h1>My resume</h1>
+</div>
+<div class="con" style="background-color: rgb(241, 75, 45);">
+    <div class="hd" style="background-color:rgb(160, 44, 23);">Profile</div>
+    <div class="data">
+
+        <h1>Malini V</h1><br><br>
+        <h1>.  </h1>
+
+        <p style="position: absolute;top: 70px;">( Software Engineer )</p>
+
+    </div>
+</div>
+<div class="con">
+    <div class="hd">About Me</div>
+    <div class="data">
+
+        Seeking a challenging position in a reputed
+        organization where I can learn new skills, expand
+        my knowledge, and
+        leverage my learnings. To get an opportunity where
+        I can make the best of my potential and contribute
+        to the
+        organization's growth
+       
+
+    </div>
+</div>
+<div class="con ci" style="background-color:rgb(121, 45, 193);">
+    <div class="hd" style="background-color:rgb(84, 23, 142);">Image</div>
+    <div class="data">
+
+        <img src="malu.jpeg" type="image/jpeg" min-width="100px" min-height="100px">
+
+
+    </div>
+</div>
+
+
+
+
+<div class="con sc" id="sc" style="background-color: rgb(33, 160, 147);">
+    <div class="hd" style="background-color:rgb(25, 130, 120);">Skills</div>
+    <div class="data">
+
+        <a href="" id="close"> X </a>
+
+        <ul>
+
+            <li>Python</li>
+            <li>C,C++
+            </li>
+            <li>Html,Css,Js
+            </li>
+            <li>Java</li>
+
+
+
+        </ul>
+
+        
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="con bc" style="background-color: rgb(33, 160, 147);">
+    <div class="hd" style="background-color:rgb(25, 130, 120);">Skills</div>
+    <div class="data">
+
+
+       <a href="#" id="btn"> click here to check the skills </a>
+
+        
+
+    </div>
+</div>
+<div class="con" style="background-color:rgb(26, 117, 65);">
+    <div class="hd" style="background-color: rgb(22, 95, 54);">Favourite Things</div>
+    <div class="data">
+
+       <table>
+
+            <tr class="tr" >
+                <td>Fav Foods</td>
+                <td>Fav Fruits</td>
+                <td>Fav Places</td>
+            </tr>
+
+            <tr class="tr">
+                <td>Briyani</td>
+                <td>Banana</td>
+                <td>Australia</td>
+            </tr>
+
+            <tr class="tr">
+                <td>Fried Rice</td>
+                <td>Pine Apple</td>
+                <td>Switzerland</td>
+            </tr>
+
+
+            <tr class="tr">
+                <td>Parotta</td>
+                <td>Grapes</td>
+                <td>Germany</td>
+            </tr>
+
+       </table>
+
+    </div>
+</div>
+
+
+<div class="con fc" style="background-color:#292929; box-shadow: 0;">
+    
+</div>
+
+<script>
+
+var btn = document.getElementById("btn");
+var close = document.getElementById("close");
+var sc = document.getElementById("sc");
+
+btn.addEventListener("click",function(){
+    sc.style.visibility = "visible";
+});
+
+close.addEventListener("click",function(){
+
+    sc.style.visibility = "hidden";
+
+});
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>
