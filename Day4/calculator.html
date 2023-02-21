@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<style>
+
+body{
+
+margin: 0;
+padding: 0;
+background-color: #292929;
+font-size: 23px;
+font-family: sans-serif;
+font-weight: 800;
+
+}
+
+#dis{
+position: relative;
+margin-top: 60px;
+left: 32%;
+border: 5px solid orange;
+text-align: center;
+color: rgb(215, 212, 212);
+background-color: black;
+width: 500px;
+height: 50px;
+font-size: 30px;
+font-weight: 600;
+letter-spacing: 6px;
+border-radius: 10px;
+
+}
+
+#box{
+
+    position: fixed;
+    top: 21%;
+    left: 32%;
+    width: 450px;
+    height: 450px;
+    border: 4px solid gray;
+    padding: 10px 10px 10px 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.one{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 8px 8px 8px 8px;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: white;
+    background-color: #565050;
+    cursor: pointer;
+
+}
+
+
+.sym{
+    background-color: rgb(64, 101, 64);
+    font-size: 31px;
+}
+.eql{
+    background-color: blueviolet;
+}
+
+.clr{
+    background-color: tomato;
+    border-radius: 20px;
+    width:auto ;
+    height:60px;
+    font-size: 19px;
+    font-weight: 500;
+    border: 0px;
+    
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+    
+
+<input type="text" id="dis">
+
+<div id="box">
+<button class=" one sym" id="+">+</button>
+
+<button class="one sym" id="-">-</button>
+<button class="one sym" id="*" style="font-size: 20px;">X</button>
+<button class="one sym" id="/">/</button>
+<button class="one" id="1">1</button>
+<button class="one" id="2">2</button>
+<button class="one" id="3">3</button>
+<button class="one" id="0">0</button>
+<button class="one" id="4">4</button>
+<button class="one" id="5">5</button>
+<button class="one" id="6">6</button>
+<button class="one eql" id="chk">=</button>
+<button class="one" id="7">7</button>
+<button class="one" id="8">8</button>
+<button class="one" id="9">9</button>
+<button class="one clr" id="rel">clear</button>
+
+</div>
+
+
+<script>
+
+var dis = document.getElementById("dis");
+var mul = document.getElementById("*");
+var dvs = document.getElementById("/");
+var ad = document.getElementById("+");
+var sub = document.getElementById("-");
+
+var one = document.getElementById("1");
+var two = document.getElementById("2");
+var three = document.getElementById("3");
+var four = document.getElementById("4");
+var five = document.getElementById("5");
+var six = document.getElementById("6");
+var seven = document.getElementById("7");
+var eight = document.getElementById("8");
+var nine = document.getElementById("9");
+var zero = document.getElementById("0");
+
+var dv = "";
+
+mul.addEventListener("click",function(){
+
+
+dv+="*"
+dis.value=dv;
+
+
+});
+dvs.addEventListener("click",function(){
+
+
+dv+="/"
+dis.value=dv;
+
+
+});
+ad.addEventListener("click",function(){
+
+
+dv+="+"
+dis.value=dv;
+
+
+});
+sub.addEventListener("click",function(){
+
+
+dv+="-"
+dis.value=dv;
+
+
+});
+one.addEventListener("click",function(){
+
+
+dv+="1"
+dis.value=dv;
+
+
+});
+two.addEventListener("click",function(){
+
+
+dv+="2"
+dis.value=dv;
+
+
+});
+
+three.addEventListener("click",function(){
+
+
+dv+="3"
+dis.value=dv;
+
+
+});
+
+four.addEventListener("click",function(){
+
+
+dv+="4"
+dis.value=dv;
+
+
+});
+
+five.addEventListener("click",function(){
+
+
+dv+="5"
+dis.value=dv;
+
+
+});
+six.addEventListener("click",function(){
+
+
+dv+="6"
+dis.value=dv;
+
+
+});
+seven.addEventListener("click",function(){
+
+
+dv+="7"
+dis.value=dv;
+
+
+});
+eight.addEventListener("click",function(){
+
+
+dv+="8"
+dis.value=dv;
+
+
+});
+nine.addEventListener("click",function(){
+
+
+dv+="9"
+dis.value=dv;
+
+
+});
+zero.addEventListener("click",function(){
+
+
+dv+="0"
+dis.value=dv;
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var chk = document.getElementById("chk");
+var dis = document.getElementById("dis");
+
+chk.addEventListener("click",function(){
+
+    var val = dis.value;
+    var len = val.length;
+    var l = ["0","1","2","3","4","5","6","7","8","9"];
+    var sym = ["*","+","-","/"];
+    var nm=[];
+    var sm = [];
+    var t="";
+    for(let i in val){
+        let f=0;
+        let g=0;
+        let v = val[i];
+        for(let j in l){
+            let a=l[j];
+            if(a==v){
+                f=1;
+            }
+        }
+
+        for(let k in sym){
+            let b=sym[k];
+            if(b==v){
+                g=1;
+            }
+        }
+        if(f==1){
+
+            t=t+v;
+        }
+
+        if(g==1){
+            t = parseInt(t);
+            nm.push(t);
+            sm.push(v);
+            t="";
+        }
+        if(i==(len-1)){
+            t = parseInt(t);
+            nm.push(t);
+            t=""
+        }
+        
+    }
+
+
+    var res=nm[0];
+    var x=0;
+    for(let m in nm){
+        if(m!=0){
+
+            let e = nm[m];
+            let sk = sm[x];
+            if(sk=="+"){
+                res=res+e;
+            }
+            if(sk=="-"){
+                res=res-e;
+            }
+            if(sk=="*"){
+                res=res*e;
+            }
+            if(sk=="/"){
+                res=res/e;
+            }
+            x=x+1;
+
+        }
+        
+
+    }
+
+    //alert("hiii"+res);
+
+
+    dis.value=res;
+});
+
+
+var rel = document.getElementById("rel");
+rel.addEventListener("click",function(){
+
+window.location="calculator.html";
+
+});
+
+
+
+</script>
+
+</body>
+</html>
