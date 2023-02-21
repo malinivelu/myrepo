@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loan req</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            overflow: hidden;
+            background-image: url(https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2015/04/bankloan-e1427929452613.jpg);
+            background-size: cover;
+        }
+        h1{
+            color:aqua;
+            height:auto;
+            width:100%;
+            padding:50px 50px 50px 50px;
+            font-style: italic;
+            background-color:#292929;
+            text-align: center;
+            text-shadow: 3px 3px black;
+            margin-top: -20px;
+            
+        }
+            
+        
+        #start{
+            position: relative;
+            margin-top: 110px;
+            font-style: italic;
+            padding: 20px 20px 20px 20px;
+            width:350px;
+            height:250px;
+            color:black;
+            
+
+
+        }
+       
+    </style>
+     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+     <script>
+         $(document).ready(
+             function(){
+                 $('#bnlogin').click(
+                     function() {
+                         var loanAmount=$('#la').val();
+                         var Tenure=$('#tn').val();
+                         var Collatral=$('#ct').val();
+                         var type=$("input[name='type']:checked").val();
+                         var cibilScore=$('#cr').val();
+                         loanAmount==""||Tenure==""||Collatral==""||type==""||cibilScore=="" ? alert("Something went wrong") : alert("All Done!!!");
+                         
+                     }
+                 )
+ 
+         })
+     </script>
+</head>
+<body>
+    <h1>Loan Requirements</h1>
+    <center>
+    <div id="start">
+        <form id="formlogin">
+            <label><b>Loan Amount</b></label>
+            <input type="number" id="la" /><br><br>
+            <label><b>Tenure</b></label>
+            <input type="number" id="tn" /><br><br>
+            <label><b>Collatral</b></label>
+            <input type="text" id="ct" /><br><br>
+            <label><b>Type</b></label><br><br>
+                <input type="radio" name="rggender" id="r1"/><b>home</b>
+                <input type="radio" name="rggender" id="r2" /><b>vechile</b>
+                <input type="radio" name="rggender" id="r3" /><b>education</b>
+                <br><br>
+            <label><b>Cibil Score</b></label>
+            <input type="range" id="cr" /><br><br><br>
+            <input type="submit" id="bnlogin" style="color: black;" class="logradius" value="login" />
+        </form>
+        </div>
+    </center>
+</body>
+</html>

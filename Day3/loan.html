@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loan</title>
+    <style>
+        img{
+            height:100px;
+            width:200px;
+            overflow: hidden;
+            border-radius: 20px;
+            border-color: rgb(48, 3, 3);
+            border:double;
+        }
+        
+        ul li{
+            display: inline;
+            padding: 18px;
+            margin: 20px;
+            color:black;
+    
+        }    
+        body{
+            background-image: url(https://www.idfcfirstbank.com/content/dam/idfcfirstbank/images/blog/finance/what-is-a-collateral-loan-717x404.jpg);
+            background-size: cover;
+            /*background-color: black;*/
+        }
+        
+       
+        
+       
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        /*JAVA SCRIPT
+        /*function login(){
+            //alert("login");
+            var USERNAME ="malu";
+            var PASSWORD ="7777";
+            var entered_username = document.getElementById("txtUsername").value;
+            var entered_password = document.getElementById("txtPassword").value;
+            //alert(entered_username + " " + entered_password);
+            if(entered_username == USERNAME){
+                if(entered_password == PASSWORD)
+                    alert("logged in successfully")
+                else
+                    alert("Invalid Password")
+            }
+            else
+                alert("Invalid Information")
+
+            }*/ 
+           
+            $(document).ready(
+                function() {
+                    $("#btnlogin").click(
+                        function(){
+                            let name=$("#textUsername").val();
+                            let pass=$("#textPassword").val();
+                            name=="malu"&&pass=="7777"? alert("welcome") : alert("Invalid!!");
+                        }
+                    )
+
+            })
+           
+            
+        
+    
+    </script>
+
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBiBkDnKwaGRjh6dTFoCnMY_jwXWjqRAthtg&usqp=CAU">
+    <div class="main">
+       <br><br><br><br><br>
+        
+
+    </div>
+    <section id="loginSection">
+        <form id="frmlogin">
+            <center>
+            <label>Username</label>
+            <input class="cornerstyle" type="text" id="textUsername" />
+            <br /><br />
+            <label>Password</label>
+            <input class="cornerstyle" type="password" id="textPassword" />
+            <br /><br />
+            <input class="cornerstyle"  type="submit" id="btnlogin" value="login" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button>
+                <a href="bacis info.html">Register</a>
+            </button><br /><br /></center>
+            
+        
+    
+    
+        
+    </form>
+    </section>
+</body>
+</html>

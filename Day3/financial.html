@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>financial</title>
+    <style>
+        h1{
+            color:aqua;
+            height:auto;
+            width:100%;
+            padding:50px 50px 50px 50px;
+            font-style: italic;
+            background-color:#292929;
+            text-align: center;
+            text-shadow: 3px 3px black;
+            
+
+        }
+        body{
+            background-image: url(https://us.123rf.com/450wm/prima91/prima912004/prima91200400685/144896199-finance-concept-in-blocks-with-word-loans-closeup-dollars-banknotes.jpg?ver=6);
+            background-size: cover;
+        }
+        
+        #frame{
+            overflow-x: hidden;
+            position: absolute;
+            left:15%;
+            
+        }
+       
+        #bnstyle{
+            position: relative;
+        }
+
+
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $('#bnlogin').click(
+                    function() {
+                        var salary=$('#sn').val();
+                        var annualIncome=$('#In').val();
+                        var monthlyExpenses=$('#mex').val();
+                        salary==""||annualIncome==""||monthlyExpenses=="" ? alert("Not eligible to buy loan") : alert("Successfull,Eligible to buy loan");
+                        
+                    }
+                )
+
+        })
+    </script>
+</head>
+<body>
+    <h1 id="header"><b>Financial Details</b></h1>
+    <div id="start">
+        <form id="formlogin">
+            <label><b>Salary</b></label>
+            <input type="number" id="sn" /><br><br>
+            <label><b>Annual Income</b></label>
+            <input type="number" id="In" /><br><br>
+            <label><b>Monthly expenses</b></label>
+            <input type="range" id="mex" /><br><br>
+        </form>
+    </div>
+    
+    <a href="loanframe.html" target="myframe">Existing loan information</a>
+    <iframe id="frame" height="100" width="100" name=myframe></iframe><br><br><br><br><br><br><br><br><br><br><br>
+    <input type="submit" id="bnlogin" style="color: black;" class="logradius" value="login" />
+    <input type="reset" id="bnreset" style="color: black;" class="reradius" value="cancel" />
+    <br><br>
+    <button id="bnstyle">
+        <a href="D:\website\feb13\loan requirements.html">next</a>
+    </button>
+    
+
+</body>
+</html>

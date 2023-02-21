@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic Info</title>
+    <style>
+        h1,section{
+            border: solid 2px brown;
+            text-align:center;
+            position:absolute;     
+        }
+        #banktitle{
+           font-size:1.5em;
+           color:brown;
+           height:55px;
+           width:400px;
+           top:10px;
+           left:450px;
+           padding-top:30px; 
+           
+        }
+            
+            
+        #loginsection{
+            left:480px;
+            top:130px;
+            width:300px;
+            padding:20px;
+            
+        }
+        .bradius{
+            border-radius: 40px;
+        }
+        .lradius{
+            border-radius:40px;
+        }
+        .liradius{
+            border-radius:40px;
+        }
+        .logradius{
+            border-radius:10px;
+            background-color: green;
+            font-size: 12px;
+            padding:5px 5px 5px 5px;
+            font-weight: 700;
+        }
+        .reradius{
+            border-radius:10px;
+            background-color:red;
+            font-size: 12px;
+            padding:5px 5px 5px 5px;
+            font-weight: 700;
+        }
+        body{
+            background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiJD1rdxCxFpnE1-LM17IZInBJa14dsR3qCw&usqp=CAU);
+            background-size: cover;
+        }
+        #btnstyle{
+            border-radius: 20px;
+            text-decoration: none;
+
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(
+            function() {
+                $("#btnlogin").click(
+                    function(){
+                        var name=$("#txtname").val();
+                        var age=$("#Age").val();
+                        var dateofbirth=$("#Dob").val();
+                        var Address=$("#textAddress").val();
+                        var phnNumber=$("#phnNumber").val();
+                        var rggender=$("input[name='rggender']:checked").val();
+                        var Fathername=$("#textfathername").val();
+                        var Husbandname=$("#texthusbandname").val();
+                        var Wifename=$("#textwifename").val();
+                        name==""||age==""||dateofbirth==""||Address==""||phnNumber==""||rggender==""||Fathername==""||Husbandname==""||Wifename=="" ? alert("Details are must filled") : alert("Details verified");
+                    }
+                )
+            })
+
+    </script>
+    </head>
+    <body>
+        <h1 id="banktitle" class="bradius"> <b>Bank Of Baroda</b></h1>
+        <section id="loginsection" class="lradius">
+            <form id="frmlogin">
+                <label><b>Name</b></label>
+                <input type="text" id="txtname" />
+                <br /><br>
+                <label><b>Age</b></label>
+                <input type="number" id="Age" />
+                <br /><br> 
+                <label><b>Date Of Birth</b></label>
+                <input type="text" id="Dob" />
+                <br><br>
+                <label><b>Address</b></label>
+                <input type="text" id="textAddress" />
+                <br><br>
+                <label><b>Phn No</b></label>
+                <input type="number" id="phnNumber" />
+                <br><br>
+                <label><b>Gender</b></label>
+                <input type="radio" name="rggender" id="r1"/><b>male</b>
+                <input type="radio" name="rggender" id="r2" /><b>female</b>
+                <input type="radio" name="rggender" id="r3" /><b>other</b>
+                <br><br>
+                <label><b>Father Name</b></label>
+                <input type="text" id="textfathername" />
+                <br><br>
+                <label><b>Husband Name</b></label>
+                <input type="text" id="texthusbandname" />
+                <br><br>
+                <label><b>Wife Name</b></label>
+                <input type="text" id="textwifename" />
+                <br><br>
+                <input type="submit" id="btnlogin" style="color: white;" class="logradius" value="login" />
+                &nbsp;&nbsp;&nbsp;
+                <input type="reset" id="btnreset" style="color: white;" class="reradius" value="cancel" /><br><br>
+                <button id="btnstyle">
+                <a href="D:\website\feb13\financial.html">next</a>
+            </button>
+    
+            </form>
+        </section><br>
+       
+</body>
+</html>
